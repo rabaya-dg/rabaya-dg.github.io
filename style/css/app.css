@@ -69,7 +69,6 @@
 
 .navbar-link:hover {
     color: var(--dark);
-    padding-bottom: 5px;
 }
 
 .navbar-link:hover::before {
