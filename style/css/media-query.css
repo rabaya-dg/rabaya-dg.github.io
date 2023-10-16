@@ -1,0 +1,261 @@
+@media screen and (max-width: 768px) {
+  .branding-logo {
+    width: 50px;
+  }
+
+  #navbar-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    padding: 2rem;
+  }
+
+  .navbar-link-list {
+    flex-direction: column;
+    position: fixed;
+    background-color: var(--white);
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: -100vw;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100vw;
+    padding: 3rem;
+    transition: right 250ms ease-in-out;
+  }
+
+  .navbar-link-list-li {
+    width: 100% !important;
+    margin-left: 0 !important;
+    text-align: left !important;
+  }
+
+  .navbar-link {
+    width: 100%;
+    height: 5rem !important;
+    display: block;
+    font-size: 20px !important;
+  }
+
+  #menu {
+    display: grid;
+    width: 3rem;
+    height: 2rem;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+
+    > div > span {
+      width: 100%;
+      height: 2px;
+      background-color: var(--dark);
+      display: block;
+
+      &:not(:first-child) {
+        margin-top: 5px;
+      }
+    }
+    /* when hover on #menu, the nextsibling .navbar-link-list will have css marginright = 0 */
+
+    &:focus ~ .navbar-link-list {
+      right: 0;
+    }
+  }
+
+  #scroll-down {
+    bottom: 0 !important;
+  }
+
+  .container {
+    width: 100vw !important;
+    padding: 2rem !important;
+    display: grid;
+    place-items: center !important;
+    height: 100%;
+  }
+
+  #landing-page-view {
+    padding: 5rem 2rem !important;
+  }
+
+  #landing-page-view-inner {
+    padding: 5rem 0 !important;
+  }
+
+  #name {
+    font-size: 50px;
+  }
+
+  #signature {
+    width: 200px;
+    left: 50%;
+  }
+
+  #lpv-description {
+    font-size: 16px;
+  }
+
+  #view-portfolio {
+    width: 100% !important;
+  }
+
+  .lpv-links {
+    font-size: 12px;
+  }
+
+  #projects-page-view {
+    padding: 0 !important;
+  }
+
+  .project-list {
+    grid-template-columns: repeat(9, 1fr) !important;
+    grid-template-rows: 9fr !important;
+    width: 100vw;
+    overflow-x: scroll;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    padding: 0 2rem !important;
+  }
+
+  .project-li {
+    grid-auto-flow: row !important;
+    grid-area: auto !important;
+    scroll-snap-align: center;
+    width: 100vw;
+    border-radius: 0;
+  }
+
+  .project-li-a {
+    &:focus {
+      pointer-events: none;
+
+      ~ html {
+        overflow: hidden !important;
+      }
+
+      .project-li-a-show {
+        display: grid;
+        place-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        z-index: 999999 !important;
+        overflow: hidden !important;
+        padding: 2rem;
+      }
+
+      .project-li-bg-back {
+        position: static !important;
+        height: auto;
+        width: 100%;
+        transform: scale(0);
+        border-radius: 20px;
+        opacity: 1;
+        filter: none;
+        animation: showed 0.5s ease-in-out forwards;
+      }
+    }
+  }
+
+  .heading {
+    font-size: 50px;
+    display: block;
+
+    &::before {
+      font-size: 50px;
+      -webkit-text-stroke: 2px var(--dark);
+    }
+
+    &::after {
+      font-size: 50px;
+      -webkit-text-stroke: 2px var(--dark);
+    }
+
+    &:hover {
+      color: var(--dark) !important;
+    }
+  }
+
+  #about-page-view {
+    grid-template-columns: 1fr !important;
+    padding: 0 auto !important;
+  }
+
+  #self-container {
+    width: 100%;
+    height: auto;
+  }
+
+  #self {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about-text {
+    text-indent: 0;
+  }
+
+  .apv-row {
+    grid-template-columns: 1fr;
+  }
+
+  #contact-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  #message-form {
+    width: 100% !important;
+    margin-top: 2rem;
+  }
+
+  #contact-details {
+    > a {
+      font-size: 16px !important;
+    }
+  }
+
+  #lwt {
+    font-size: 42px !important;
+  }
+
+  #contact-details {
+    > a {
+      font-size: 12px !important;
+    }
+  }
+
+  footer {
+    width: 100%;
+
+    #footer-inner {
+      width: 100vw;
+      margin: 0 auto;
+      padding: 2rem;
+
+      .logo {
+        width: 50px;
+      }
+
+      > p {
+        font-size: 12px !important;
+        color: var(--gray);
+      }
+
+      > ul {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+#scroll-up {
+  right: 2rem;
+  bottom: 2rem;
+}

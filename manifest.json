@@ -1,0 +1,43 @@
+{
+    "name": "DG Portfolio",
+    "short_name": "FG",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#181818",
+    "theme_color": "#fff",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "/assets/logo.svg",
+        "type": "image/svg", "sizes": "72x72"
+      },
+      {
+        "src": "/assets/logo.svg",
+        "type": "image/svg", "sizes": "96x96"
+      },
+      {
+        "src": "/assets/logo.svg",
+        "type": "image/svg","sizes": "128x128"
+      },
+      {
+        "src": "/assets/logo.svg",
+        "type": "image/svg", "sizes": "144x144"
+      },
+      {
+        "src": "/assets/logo.svg",
+        "type": "image/svg", "sizes": "152x152"
+      },
+      {
+        "src": "/assets/logo.svg",
+        "type": "image/svg", "sizes": "192x192"
+      },
+      {
+        "src": "/assets/logo.svg",
+        "type": "image/svg", "sizes": "384x384"
+      },
+      {
+        "src": "/assets/logo.svg",
+        "type": "image/svg", "sizes": "512x512"
+      }
+    ]
+  }

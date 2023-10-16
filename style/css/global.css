@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'DMSans';
+    src: url('/assets/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Kroana One';
+    src: url('/assets/fonts/Krona_One/KronaOne-Regular.ttf') format('truetype');
+}
+
+* {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    user-zoom: none;
+    user-select: none;
+    box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Kroana One';
+}
+
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark: #181818;
+    --light: #efefef;
+    --hover-dark: #282828;
+    --hover-light: #f5f5f5;
+    --border-light: #eee;
+    --border-dark: #222222; 
+    --primary: #151515;
+    --gray: #aaa;
+    --text: #222222;
+    --main: #EE7674;
+    --radius: 50px;
+    --border: 1px solid var(--border-light);
+}
+
+
+
+.btn {
+    width: 100%;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-size: 12px;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: var(--radius);
+
+    &:hover {
+        background-color: var(--hover-dark);
+    }
+}
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    scroll-behavior: smooth !important;
+}
+
+/* #wrapper:before {
+    content: ' ';
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: url('/assets/1609.m00.i125.n001.S.c12.198623492 Topographic contour lines vector map seamless pattern.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    pointer-events: none !important;
+    z-index: -1 !important;
+  } */
+
+.container {
+    width: 70vw !important;
+    margin: auto !important;
+    height: 100%;
+}
+
+#main {
+    width: 100vw;
+    height: auto;
+}
+
+section {
+    height: auto !important;
+}
+
+
+#overlay {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: var(--white);
+    overflow: hidden;
+    z-index: 99999999 !important;
+    animation: hide .25s ease-in-out forwards;
+    animation-delay: 1s;
+    pointer-events: none;
+    
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+    } 80% {
+        opacity: 0;
+        pointer-events: none !important;
+    } 100% {
+        opacity: 0;
+        display: none;
+    }
+}
